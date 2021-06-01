@@ -1,0 +1,53 @@
+body{
+    margin: auto;
+    padding: 0;
+    width: 800px;
+    background-color: #F5F5DC;
+}
+.container{
+    display: flex;
+    margin: auto;
+}
+img{
+    border-radius: 100px;
+    width: 200px;
+}
+.img{
+    text-align: center;
+}
+.educacion{
+    width: 500px;
+    /* border: red 1px solid; */
+    margin-top: 40px;
+    margin-right: 50px;
+    text-align: justify;
+    padding: 10px;
+}
+h2{
+    text-align: center;
+}
+.experiencias{
+    width: 700px;
+    /* border: red 1px solid; */
+    margin-top: 40px;
+    margin-right: 50px;
+    text-align: justify;
+    padding: 10px;
+}
+.title{
+    margin-top: 30px;
+    text-align: center;
+}
+.pesonalDescription{
+    /* border: red 1px solid; */
+    flex: center;
+    /* margin-left: 120px; */
+}
+.pesonalDescription h2{
+    text-align: center;
+}
+.pesonalDescription span{
+    text-align: right;
+    margin-left: 20px;
+
+}
