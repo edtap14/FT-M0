@@ -220,19 +220,20 @@ function tablaDelSeis() {
   }
   return array
 }
+// console.log(tablaDelSeis())
 
 
 function tieneTresDigitos(numero) {
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  let entero = numero.toString().split('').length
+  let entero = numero.toString().length
   if (entero === 3) {
     return true
   }
   return false
 
 }
-console.log(tieneTresDigitos(100))
+// console.log(tieneTresDigitos(223))
 
 function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
