@@ -10,13 +10,13 @@ const nuevoNum = 2;
 const nuevoBool = true;
 
 // Resuelve el siguiente problema matemático:
-const nuevaResta = 10 - 5 === 5;
+const nuevaResta = 10 - 5 == 5;
 
 // Resuelve el siguiente problema matemático:
-const nuevaMultiplicacion = 10 * 4 === 40;
+const nuevaMultiplicacion = 10 * 4 == 40;
 
 // Resuelve el siguiente problema matemático:
-const nuevoModulo = 21 % 5 === 1;
+const nuevoModulo = 21 % 5 == 1;
 
 
 // En los próximos 22 problemas, deberás completar la función.
@@ -90,7 +90,7 @@ function mayorQueCincuenta(num) {
   // De lo contrario, devuelve "false"
   // Tu código:
   if (num > 50) {
-    return true;
+    return true
   } else {
     return false
   }
@@ -117,7 +117,7 @@ function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (num % 2 === 1) {
+  if (num % 2 != 0) {
     return true;
   } else {
     return false;
@@ -128,13 +128,13 @@ function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
-  return num * num;
+  return Math.pow(num, 2);
 }
 
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
-  return num * num * num;
+  return Math.pow(num, 3);
 }
 
 function elevar(num, exponent) {
@@ -193,7 +193,7 @@ function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  return "Hola " + nombre +"!"
+  return "Hola " + nombre + "!"
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
@@ -207,7 +207,7 @@ function retornarPerimetro(lado) {
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
 
-  return lado + lado + lado + lado
+  return lado * 4
 }
 
 
@@ -233,7 +233,9 @@ function esVocal(letra) {
   //Verificar si el usuario ingresó un string de más de un carácter y, en ese caso, informarle 
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   //Escribe tu código aquí
-  if (letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u") {
+  var vocal = letra.toLowerCase()
+ 
+  if (vocal === "a" || vocal === "e" || vocal === "i" || vocal === "o" || vocal === "u") {
     return "Es vocal"
   } else {
     return "Dato incorrecto"
