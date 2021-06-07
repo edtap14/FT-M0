@@ -65,7 +65,9 @@ function nuevoUsuario(nombre, email, password) {
 
   return usuario
 
+
 }
+console.log(nuevoUsuario({}))
 
 function tieneEmail(usuario) {
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
@@ -76,7 +78,7 @@ function tieneEmail(usuario) {
   }
   return false
 }
-// console.log(tieneEmail({username: "edgar", email: "edgar.tapia"}))
+console.log(tieneEmail({username: "edgar"}))
 
 
 function tienePropiedad(objeto, propiedad) {
@@ -90,17 +92,26 @@ function tienePropiedad(objeto, propiedad) {
   return false
 }
 
+
 function verificarPassword(usuario, password) {
   // Comprueba si la "password" enviada coincide con la propiedad "password" del objeto "usuario"
   // Devuelve "true" si coinciden
   // De lo contrario, devuelve "false"
   // Tu código:
+
+  if(usuario.password === password){
+    return true
+  }
+  return false
 }
 
 function actualizarPassword(usuario, nuevaPassword) {
   // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevaPassword"
   // Devuelve el objeto
   // Tu código:
+  usuario.password = nuevaPassword
+
+  return usuario
 }
 
 function agregarAmigo(usuario, nuevoAmigo) {
@@ -108,6 +119,9 @@ function agregarAmigo(usuario, nuevoAmigo) {
   // Agrega "nuevoAmigo" al final de ese array
   // Devuelve el objeto "usuario"
   // Tu código:
+  usuario.amigos.push(nuevoAmigo)
+
+  return usuario
 }
 
 function pasarUsuarioAPremium(usuarios) {
