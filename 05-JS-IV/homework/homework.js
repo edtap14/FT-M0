@@ -31,13 +31,15 @@ function invocarMetodo(objeto, metodo) {
   // Invoca ese método
   // Nada necesita ser devuelto ("returned")
   // Tu código:
+  objeto[metodo]()
 }
 
 function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
   // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
-
+  const multiplicacion = objetoMisterioso.numeroMisterioso * 5
+  return multiplicacion
 }
 
 function eliminarPropiedad(objeto, unaPropiedad) {
@@ -45,6 +47,9 @@ function eliminarPropiedad(objeto, unaPropiedad) {
   // tip: tenes que usar bracket notation
   // Devuelve el objeto
   // Tu código:
+  delete objeto[unaPropiedad]
+
+  return objeto
 }
 
 function nuevoUsuario(nombre, email, password) {
@@ -52,13 +57,26 @@ function nuevoUsuario(nombre, email, password) {
   // Devuelve el objeto
   // Tu código:
 
+  const usuario = {
+    nombre: nombre,
+    email: email,
+    password: password
+  }
+
+  return usuario
+
 }
 
 function tieneEmail(usuario) {
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
   // De lo contratio, devuelve "false"
   // Tu código:
+  if(usuario.email){
+    return true
+  }
+  return false
 }
+// console.log(tieneEmail({username: "edgar", email: "edgar.tapia"}))
 
 
 function tienePropiedad(objeto, propiedad) {
@@ -66,6 +84,10 @@ function tienePropiedad(objeto, propiedad) {
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
+  if(objeto[propiedad]){
+    return true
+  }
+  return false
 }
 
 function verificarPassword(usuario, password) {
