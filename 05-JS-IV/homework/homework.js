@@ -9,7 +9,7 @@ function crearGato(nombre, edad) {
   const gato = {
     nombre: nombre,
     edad: edad,
-    meow: function(){
+    meow: function () {
       return 'Meow!'
     }
   }
@@ -22,7 +22,7 @@ function agregarPropiedad(objeto, property) {
   // Devuelve el objeto
   // NOTA: El nombre de la propiedad no es "propiedad", el nombre es el valor del argumento llamado "property" (una cadena/string)
   // Tu código:
-  objeto[property]= null
+  objeto[property] = null
   return objeto
 }
 
@@ -58,9 +58,9 @@ function nuevoUsuario(nombre, email, password) {
   // Tu código:
 
   const usuario = {
-    nombre: nombre,
-    email: email,
-    password: password
+    nombre,
+    email,
+    password
   }
 
   return usuario
@@ -73,12 +73,12 @@ function tieneEmail(usuario) {
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
   // De lo contratio, devuelve "false"
   // Tu código:
-  if(usuario.email){
+  if (usuario.email) {
     return true
   }
   return false
 }
-console.log(tieneEmail({username: "edgar"}))
+console.log(tieneEmail({ username: "edgar" }))
 
 
 function tienePropiedad(objeto, propiedad) {
@@ -86,7 +86,7 @@ function tienePropiedad(objeto, propiedad) {
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
-  if(objeto[propiedad]){
+  if (objeto[propiedad]) {
     return true
   }
   return false
@@ -99,7 +99,7 @@ function verificarPassword(usuario, password) {
   // De lo contrario, devuelve "false"
   // Tu código:
 
-  if(usuario.password === password){
+  if (usuario.password === password) {
     return true
   }
   return false
@@ -130,6 +130,10 @@ function pasarUsuarioAPremium(usuarios) {
   // Define cada propiedad "esPremium" de cada objeto como "true"
   // Devuelve el array de usuarios
   // Tu código:
+  for (let i = 0; i < usuarios.length; i++) {
+    usuarios[i].esPremium = true;
+  }
+  return usuarios
 }
 
 function sumarLikesDeUsuario(usuario) {
@@ -139,6 +143,11 @@ function sumarLikesDeUsuario(usuario) {
   // Suma todos los likes de todos los objetos "post"
   // Devuelve la suma
   // Tu código:
+  let suma = 0
+  for (let i = 0; i < usuario.posts.length; i++) {
+    suma = suma + usuario.posts[i].likes
+  }
+  return suma
 }
 
 function agregarMetodoCalculoDescuento(producto) {
